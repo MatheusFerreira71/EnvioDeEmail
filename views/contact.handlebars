@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/public/css/style.css">
     <title>teste</title>
 </head>
 
 <body>
-    <form onsubmit="enviarEmail()">
+    {{msg}}
+    <form method="POST" action="/send">
         <div class="form-group">
             <label for="inputEmail" class="text-white font-weight-bold">E-mail</label>
             <input type="email" class="form-control" name="email" id="inputEmail" placeholder="Insira seu E-mail."
@@ -25,12 +27,10 @@
                 placeholder="Diga-nos o que acha." required></textarea>
         </div>
         <div class="form-group text-center">
-            <button type="submit" id="enviar" class="btn btn-outline-success font-weight-bold" onclick="enviarEmail()">Enviar
+            <button type="submit" id="enviar" class="btn btn-outline-success font-weight-bold">Enviar
                 Feedback</button>
         </div>
     </form>
 </body>
-
-<script src="indexx.js"></script>
 
 </html>
