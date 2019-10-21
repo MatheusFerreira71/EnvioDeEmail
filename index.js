@@ -1,4 +1,4 @@
-$('#enviar').click(function (e) {
+function enviarEmail() {
     const app = require("express")();
 
     const nome = document.getElementById('inputNome').value;
@@ -31,9 +31,9 @@ $('#enviar').click(function (e) {
         }
 
         transporter.sendMail(message, (error, info) => {
-            if (error) {
+            if(error){
                 return res.status(400).send('falhou.');
-            } else {
+            }else{
                 return res.status(200).send('enviou');
             }
         });
@@ -41,5 +41,5 @@ $('#enviar').click(function (e) {
     });
 
     app.listen(3000);
-});
+}
 
