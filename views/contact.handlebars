@@ -26,6 +26,11 @@
             <textarea class="form-control" name="mensagem" id="FeedBackMessage" rows="3"
                 placeholder="Diga-nos o que acha." required></textarea>
         </div>
+        <div class="form-group">
+            <label id="teste" for="inputAnexo">Nos mande um exemplo(opcional)</label>
+            <input type="file" name="anexo" id="inputAnexo" style="color: #fff;" onchange="document.getElementById('path').value = document.getElementById('inputAnexo').value">
+            <input type="text" readonly name="caminho" id="path"></input>
+        </div>
         <div class="form-group text-center">
             <button type="submit" id="enviar" class="btn btn-outline-success font-weight-bold">Enviar
                 Feedback</button>
